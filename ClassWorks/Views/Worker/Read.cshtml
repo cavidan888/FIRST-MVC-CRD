@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Read";
+}
+
+<div class="container">
+    <h2>Bordered Table</h2>
+    <p>The .table-bordered class adds borders to a table:</p>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Worker Name</th>
+                <th>Worker Position</th>
+                <th>Worker Salary</th>
+                <th>Worker Delete</th>
+                <th>Worker Update</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+
+
+           @for (int i = 0; i < ViewBag.adlist.Count; i++)
+           {
+            <tr>
+                <td>@ViewBag.adlist[i]</td>
+                <td>@ViewBag.postlist[i]</td>
+                <td>@ViewBag.salarylist[i]</td>
+                <td><a href="~/Worker/Delete/@ViewBag.idList[i]">Delete</a></td>
+            </tr>
+           }
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</div>
+
+
+<h2>Read</h2>
+
